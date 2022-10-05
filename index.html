@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Favourite Players</title>
+    <!-- Link Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+    <!-- Tailwind custom code -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        common: '#0A0826',
+                        heading: '#FF5E19',
+                        bodyBg: '#1a173e',
+                    },
+                    font: {
+                        'swash': ['Berkshire Swash', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-bodyBg">
+    <!-- Header Section -->
+    <header class="bg-common pt-20">
+        <div onmouseenter="bannerImgMouseEnter(this)" onmouseleave="bannerImgMouseLeave(this)" class="relative h-96">
+            <img class="absolute bottom-0 left-0" src="images/banner-ronaldo.png" alt="">
+            <div class="text-center">
+                <div class="w-3/5 mx-auto pt-20 px-10" onmouseover="bannerHover()">
+                    <h1 id="banner-heading" class="hover:tracking-wider text-6xl text-heading mb-5"
+                        style="font-family: 'Berkshire Swash', cursive;">Your
+                        Favourite Players</h1>
+                    <p id="banner-paragraph" class="text-gray-400">Football is like life. It requires perseverance,
+                        self-denial, hard work, sacrifice, dedication, and respect for authority. The only place success
+                        comes before work is in
+                        the dictionary.</p>
+                </div>
+            </div>
+            <img class="absolute bottom-0 right-0" src="images/goal.png" alt="">
+        </div>
+    </header>
+    <!-- Main Section -->
+    <main>
+        <section class="w-4/5 mx-auto my-10 flex gap-4">
+            <!-- Players -->
+            <div class="w-3/4 grid grid-cols-3 gap-4">
+                <!-- 1st player -->
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="images/ronaldo.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Cristiano Ronaldo</h4>
+                    <p class="mt-2"><span>96 Goals . 120 assist</span></p>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
+                </div>
+                <!-- 2nd player -->
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="images/messi.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Lionel Messi</h4>
+                    <p class="mt-2"><span>92 Goals . 120 assist</span></p>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
+                </div>
+                <!-- 3rd player -->
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="images/neymar.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Neymar</h4>
+                    <p class="mt-2"><span>81 Goals . 120 assist</span></p>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
+                </div>
+                <!-- 4th player -->
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="images/ramos.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Sergio Ramos</h4>
+                    <p class="mt-2"><span>45 Goals . 120 assist</span></p>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
+                </div>
+                <!-- 5th player -->
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="images/mbappe.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Kylian Mbappé</h4>
+                    <p class="mt-2"><span>35 Goals . 120 assist</span></p>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
+                </div>
+                <!-- 6th player -->
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="images/ibrahimovic.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Zlatan Ibrahimovic</h4>
+                    <p class="mt-2"><span>78 Goals . 120 assist</span></p>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
+                </div>
+                <!-- 7th player -->
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="images/renato-sanches.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Renato Sanches</h4>
+                    <p class="mt-2"><span>44 Goals . 120 assist</span></p>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
+                </div>
+                <!-- 8th player -->
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="images/machado.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Vítor Machado</h4>
+                    <p class="mt-2"><span>52 Goals . 120 assist</span></p>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
+                </div>
+                <!-- 9th player -->
+                <div onmouseenter="cardMouseEnter(this)" onmouseleave="cardMouseLeave(this)"
+                    class="text-center bg-common text-white border border-gray-500 rounded-sm pb-5">
+                    <img class="mx-auto" src="images/salah.png" alt="">
+                    <h4 class="text-2xl font-semibold mt-2">Mohamed Salah</h4>
+                    <p class="mt-2"><span>73 Goals . 120 assist</span></p>
+                    <button onclick="selectButton(this)"
+                        class="mt-6 bg-blue-700 text-white w-10/12 py-2 rounded-sm">SELECT</button>
+                </div>
+            </div>
+            <!-- Aside Widget -->
+            <aside class="w-1/4 grid gap-4">
+                <div id="selected" class="text-center bg-common border border-gray-500 rounded-sm">
+                    <h4 class="text-2xl font-semibold text-heading pt-5"
+                        style="font-family: 'Berkshire Swash', cursive;">
+                        Selected - V</h4>
+                </div>
+                <div class="text-center p-5 text-gray-400 bg-common border border border-gray-500 rounded-sm">
+                    <h4 class="text-2xl font-semibold text-heading pt-5"
+                        style="font-family: 'Berkshire Swash', cursive;">Budget</h4>
+                    <div class="flex justify-between mt-7">
+                        <span>Per Player</span>
+                        <input id="per-player" class="w-1/2 text-white border rounded-sm border-white bg-common p-1"
+                            type="text">
+                    </div>
+                    <button id="calculate" class="bg-blue-700 text-white w-full py-2 mt-5 rounded-sm">Calculate</button>
+                    <p class="mt-7">Player Expenses: $<span id="player-expenses"></span></p>
+                    <div class="flex justify-between mt-4">
+                        <span>Manager</span>
+                        <input id="manager-cost" class="w-1/2 text-white border rounded-sm border-white bg-common p-1"
+                            type="text">
+                    </div>
+                    <div class="flex justify-between mt-4">
+                        <span>Coach</span>
+                        <input id="coach-cost" class="w-1/2 text-white border rounded-sm border-white bg-common p-1"
+                            type="text">
+                    </div>
+                    <button id="calculate-total" class="bg-blue-700 text-white w-full py-2 mt-5 rounded-sm">Calculate
+                        Total</button>
+                    <div class="flex justify-between mt-5">
+                        <span>Total</span>
+                        <span class="text-orange-500">$<span id="total"></span></span>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <!-- Foter Section -->
+    <footer class="bg-common text-gray-400 py-20">
+        <p class="flex items-center justify-center">Copyright @ 2022 All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</body>
+
+</html>
